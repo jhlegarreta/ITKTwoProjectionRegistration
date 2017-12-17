@@ -206,7 +206,7 @@ public:
   void SetTransformParameters( const ParametersType & parameters ) const;
 
   /** Return the number of parameters required by the Transform */
-  unsigned int GetNumberOfParameters() const
+  unsigned int GetNumberOfParameters() const ITK_OVERRIDE
   {
     return m_Transform->GetNumberOfParameters();
   }
@@ -217,8 +217,8 @@ public:
 
 protected:
   TwoImageToOneImageMetric();
-  virtual ~TwoImageToOneImageMetric() {};
-  virtual void PrintSelf(std::ostream& os, Indent indent) const;
+  ~TwoImageToOneImageMetric() ITK_OVERRIDE {};
+  void PrintSelf(std::ostream& os, Indent indent) const ITK_OVERRIDE;
 
   mutable unsigned long       m_NumberOfPixelsCounted;
 

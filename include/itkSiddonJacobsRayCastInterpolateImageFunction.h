@@ -130,7 +130,7 @@ public:
   * ImageFunction::IsInsideBuffer() can be used to check bounds before
   * calling the method.
   */
-  virtual OutputType Evaluate( const PointType& point ) const;
+  OutputType Evaluate( const PointType& point ) const ITK_OVERRIDE;
 
   /** Interpolate the image at a continuous index position
   *
@@ -138,13 +138,13 @@ public:
   * specified index position. No bounds checking is done.
   * The point is assume to lie within the image buffer.
   *
-  * Subclasses must override this method.
+  * Subclasses must ITK_OVERRIDE this method.
   *
   * ImageFunction::IsInsideBuffer() can be used to check bounds before
   * calling the method.
   */
-  virtual OutputType EvaluateAtContinuousIndex(
-    const ContinuousIndexType &index ) const;
+  OutputType EvaluateAtContinuousIndex(
+    const ContinuousIndexType &index ) const ITK_OVERRIDE;
 
   virtual void Initialize(void);
 
@@ -168,15 +168,15 @@ public:
   /** Check if a point is inside the image buffer.
   * \warning For efficiency, no validity checking of
   * the input image pointer is done. */
-  inline bool IsInsideBuffer( const PointType & ) const
+  inline bool IsInsideBuffer( const PointType & ) const ITK_OVERRIDE
   {
     return true;
   }
-  bool IsInsideBuffer( const ContinuousIndexType &  ) const
+  bool IsInsideBuffer( const ContinuousIndexType &  ) const ITK_OVERRIDE
   {
     return true;
   }
-  bool IsInsideBuffer( const IndexType &  ) const
+  bool IsInsideBuffer( const IndexType &  ) const ITK_OVERRIDE
   {
     return true;
   }
@@ -184,9 +184,9 @@ public:
 protected:
   SiddonJacobsRayCastInterpolateImageFunction();
 
-  ~SiddonJacobsRayCastInterpolateImageFunction(){};
+  ~SiddonJacobsRayCastInterpolateImageFunction() ITK_OVERRIDE{};
 
-  virtual void PrintSelf(std::ostream& os, Indent indent) const ITK_OVERRIDE;
+  void PrintSelf(std::ostream& os, Indent indent) const ITK_OVERRIDE;
 
   /// Transformation used to calculate the new focal point position
   TransformPointer m_Transform; // Displacement of the volume
