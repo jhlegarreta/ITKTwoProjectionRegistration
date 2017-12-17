@@ -133,11 +133,11 @@ void exe_usage()
 
 int TwoProjection2D3DRegistration( int argc, char *argv[] )
 {
-  char *fileImage2D1 = NULL;
+  char *fileImage2D1 = nullptr;
   double projAngle1 = -999;
-  char *fileImage2D2 = NULL;
+  char *fileImage2D2 = nullptr;
   double projAngle2 = -999;
-  char *fileVolume3D = NULL;
+  char *fileVolume3D = nullptr;
   // Default output file names
   const char *fileOutput1 = "Image2D1_Registered.tif";
   const char *fileOutput2 = "Image2D2_Registered.tif";
@@ -314,7 +314,7 @@ int TwoProjection2D3DRegistration( int argc, char *argv[] )
     if (ok == false)
       {
 
-      if (fileImage2D1 == NULL)
+      if (fileImage2D1 == nullptr)
         {
         fileImage2D1 = argv[1];
         argc--;
@@ -328,7 +328,7 @@ int TwoProjection2D3DRegistration( int argc, char *argv[] )
         argv++;
         }
 
-      if (fileImage2D2 == NULL)
+      if (fileImage2D2 == nullptr)
         {
         fileImage2D2 = argv[1];
         argc--;
@@ -342,7 +342,7 @@ int TwoProjection2D3DRegistration( int argc, char *argv[] )
         argv++;
         }
 
-      else if (fileVolume3D == NULL)
+      else if (fileVolume3D == nullptr)
         {
         fileVolume3D = argv[1];
         argc--;

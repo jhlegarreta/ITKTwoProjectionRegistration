@@ -76,8 +76,8 @@ void raytracing_exe_usage()
 
 int GetDRRSiddonJacobsRayTracing( int argc, char *argv[] )
 {
-  char *input_name = NULL;
-  char *output_name = NULL;
+  char *input_name = nullptr;
+  char *output_name = nullptr;
 
   bool ok;
   bool verbose = false;
@@ -254,7 +254,7 @@ int GetDRRSiddonJacobsRayTracing( int argc, char *argv[] )
 
     if (ok == false)
       {
-      if (input_name == NULL)
+      if (input_name == nullptr)
         {
         input_name = argv[1];
         argc--;

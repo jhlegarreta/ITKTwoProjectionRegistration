@@ -30,14 +30,14 @@ TwoProjectionImageRegistrationMethod<TFixedImage,TMovingImage>
 {
   this->SetNumberOfRequiredOutputs( 1 );  // for the Transform
 
-  m_FixedImage1   = 0; // has to be provided by the user.
-  m_FixedImage2   = 0; // has to be provided by the user.
-  m_MovingImage  = 0; // has to be provided by the user.
-  m_Transform    = 0; // has to be provided by the user.
-  m_Interpolator1 = 0; // has to be provided by the user.
-  m_Interpolator2 = 0; // has to be provided by the user.
-  m_Metric       = 0; // has to be provided by the user.
-  m_Optimizer    = 0; // has to be provided by the user.
+  m_FixedImage1   = nullptr; // has to be provided by the user.
+  m_FixedImage2   = nullptr; // has to be provided by the user.
+  m_MovingImage  = nullptr; // has to be provided by the user.
+  m_Transform    = nullptr; // has to be provided by the user.
+  m_Interpolator1 = nullptr; // has to be provided by the user.
+  m_Interpolator2 = nullptr; // has to be provided by the user.
+  m_Metric       = nullptr; // has to be provided by the user.
+  m_Optimizer    = nullptr; // has to be provided by the user.
 
 
   m_InitialTransformParameters = ParametersType(1);
@@ -387,7 +387,7 @@ TwoProjectionImageRegistrationMethod<TFixedImage,TMovingImage>
       break;
     default:
       itkExceptionMacro("MakeOutput request for an output number larger than the expected number of outputs");
-      return 0;
+      return nullptr;
     }
 }
 
