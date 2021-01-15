@@ -51,6 +51,6 @@ setup(
     keywords='ITK InsightToolkit Projection Registration',
     url=r'https://github.com/InsightSoftwareConsortium/ITKTwoProjectionRegistration',
     install_requires=[
-        r'itk>=5.1.0.post2'
+        r'itk>=5.2rc1'
     ]
     )
