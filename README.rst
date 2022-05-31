@@ -14,7 +14,7 @@ ITKTwoProjectionRegistration
 Overview
 --------
 
-An `ITK <http://itk.org>`_-based implementation of intensity-based 2D/3D rigid
+An `ITK <https://itk.org>`_-based implementation of intensity-based 2D/3D rigid
 image registration for patient setup assessment in external beam radiotherapy.
 The registration framework was designed to simultaneously register two
 projection images to a 3D image volume. The projection geometry was set up to
@@ -30,8 +30,8 @@ A more detailed description can be found in the Insight Journal article::
   ITK-Based Implementation of Two-Projection 2D/3D Registration Method with an
   Application in Patient Setup for External Beam Radiotherapy
   The Insight Journal. July-December. 2010.
-  http://hdl.handle.net/10380/3245
-  http://www.insight-journal.org/browse/publication/784
+  https://hdl.handle.net/10380/3245
+  https://www.insight-journal.org/browse/publication/784
 
 
 Installation
