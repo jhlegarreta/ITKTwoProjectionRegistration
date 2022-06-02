@@ -18,8 +18,6 @@
 #ifndef itkTwoImageToOneImageMetric_hxx
 #define itkTwoImageToOneImageMetric_hxx
 
-
-
 namespace itk
 {
 
