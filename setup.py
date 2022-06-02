@@ -27,7 +27,7 @@ setup(
                      'J. Wu, "ITK-Based Implementation of Two-Projection 2D/3D '
                      'Registration Method with an Application in Patient Setup '
                      'for External Beam Radiotherapy", Insight Journal, '
-                     'July-December 2010, http://hdl.handle.net/10380/3245.',
+                     'July-December 2010, https://hdl.handle.net/10380/3245.',
     classifiers=[
         "License :: OSI Approved :: Apache Software License",
         "Programming Language :: Python",
